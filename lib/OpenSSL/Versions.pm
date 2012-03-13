@@ -5,9 +5,8 @@ use strict;
 use warnings;
 use Carp;
 use Exporter qw( import );
-use Try::Tiny;
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 $VERSION = eval $VERSION;
 
 our @EXPORT = ();
@@ -38,7 +37,7 @@ sub parse_openssl_version_number {
         @ret = ( SSLeay => _parse_openssl_pre_v093dev( $vstr ) );
     }
 
-    return wantarray ? @ret : $ret[1];
+    return wantarray ? reverse @ret : $ret[1];
 }
 
 sub _parse_openssl_v096_or_later {

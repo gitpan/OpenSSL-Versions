@@ -17,6 +17,5 @@ no_index:
   directory:
     - t
     - inc
-requires:
-  Try::Tiny: 0
-version: 0.001
+requires: {}
+version: 0.002
